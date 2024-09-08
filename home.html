@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Travel Website</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+		integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="styles/home.css">
+
+</head>
+
+<body>
+	<div class="navbar">
+		<div class="logo">
+			<h1>DESTINATION ANYWHERE</h1>
+		</div>
+		<div class="menu">
+			<ul>
+				<li><a href="#home">Home</a></li>
+				<li><a href="#book">Booking</a></li>
+				<li><a href="#packages">Packages</a></li>
+				<li><a href="#services">Services</a></li>
+				<li><a href="#gallery">Gallery</a></li>
+				<li><a href="#reviews">Reviews</a></li>
+				<li><a href="#cantact">Contact</a></li>
+			</ul>
+		</div>
+
+		<a href="tourlogin.html">
+			<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpic.onlinewebfonts.com%2Fsvg%2Fimg_24787.png&f=1&nofb=1&ipt=e24d2a4bd26fc7d600cfaff9c5ba4ee8f252cedeb8bfff7468eaeebaa70d2d1f&ipo=images "
+				style="height:25px;width: auto;" class="profile-pic">
+		</a>
+	</div>
+	<a name="home"></a>
+	<div class="body">
+		<div class="heading">
+			<h1>Travel With Us</h1>
+			<br>
+			<p>Take only memories, leave only footprints </p>
+			<br>
+			<br>
+			<a href="#">Learn More</a>
+		</div>
+		<!--<div id="loginDialog">
+			<h1>Login</h1>
+			<h3>Do You Have an Account?</h3>
+			<a href="tourlogin.html" class="btn" >Login</a><br>
+			<button onclick="hideLoginDialog()" class="btn" >Cancel</button>
+		</div>
+		<script>
+			function showLoginDialog() {
+				document.getElementById("loginDialog").style.display = "none";
+			}
+			function hideLoginDialog() {
+				document.getElementById("loginDialog").style.display = "none";
+			}
+			function handleLogin() {
+				hideLoginDialog();
+			}
+			setTimeout(showLoginDialog, 1000000);
+		</script>-->
+		<div class="tours">
+			<div class="places">
+				<h2>Lovable Taj Mahal</h2>
+				<img src="https://www.travelandleisure.com/thmb/w1px_CF34KAjs5NXVxo7ZEOmPK8=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/taj-mahal-agra-india-TAJ0217-9eab8f20d11d4391901867ed1ce222b8.jpg"
+					style="width: 300px;border-radius: 12px;">
+				<br>
+				<br>
+				<a href="tourlogin.html">Book Now 15% OFF</a>
+			</div>
+			<div class="places">
+				<h2>Thanjai Shivan Temple</h2>
+				<img src="https://i.pinimg.com/originals/c2/30/c7/c230c768b9078005082c4c4d817b8fa9.jpg"
+					style="width: 300px;border-radius: 12px;">
+				<br>
+				<br>
+				<a href="tourlogin.html">Book Now 20% OFF</a>
+			</div>
+			<div class="places">
+				<h2>Nohkalikai Waterfalls</h2>
+				<img src="https://static-blog.treebo.com/wp-content/uploads/2018/07/The-High-and-Mighty-Nohkalikai-Waterfalls.jpg"
+					style="width: 300px;border-radius: 12px;">
+				<br>
+				<br>
+				<a href="tourlogin.html">Book Now 25% OFF</a>
+			</div>
+		</div>
+	</div>
+
+	<section class="book" id="book">
+		<h1 class="head">
+			<span>B</span>
+			<span>O</span>
+			<span>O</span>
+			<span>K</span>
+			<span class="space"></span>
+			<span>N</span>
+			<span>O</span>
+			<span>W</span>
+		</h1>
+		<div class="row">
+			<div class="image">
+				<img src="https://thumbs.dreamstime.com/b/happy-travel-woman-vacation-concept-funny-traveler-enjoy-her-trip-ready-to-adventure-happy-travel-woman-vacation-concept-118679424.jpg"
+					alt="">
+			</div>
+			<a name="book"></a>
+			<form action="">
+
+				<div class="inputbox">
+					<h4>Where from</h4>
+					<input type="text" placeholder="Place name">
+				</div>
+				<div class="inputbox">
+					<h4>Where to</h4>
+					<input type="text" placeholder="Place name">
+				</div>
+				<div class="inputbox">
+					<h4>How many</h4>
+					<input type="number" placeholder="number of guest" min="1" max="1000">
+				</div>
+				<div class="inputbox">
+					<h4>Leavings</h4>
+					<input type="date">
+				</div>
+				<div class="inputbox">
+					<h4>Arrivals</h4>
+					<input type="date">
+				</div>
+
+				<input type="submit " class="btn" value="Book now">
+			</form>
+		</div>
+	</section>
+	<a name="packages"></a>
+	<section class="packages" id="packages">
+		<h1 class="head">
+			<span>P</span>
+			<span>A</span>
+			<span>C</span>
+			<span>K</span>
+			<span>A</span>
+			<span>G</span>
+			<span>E</span>
+			<span>S</span>
+		</h1>
+		<div class="box-container">
+			<div class="box">
+				<img
+					src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Mumbai_Aug_2018_%2843397784544%29.jpg/1200px-Mumbai_Aug_2018_%2843397784544%29.jpg">
+				<div class="content">
+					<h3><i class="fas fa-map-marker-alt"></i>MUMBAI</h3>
+					<p>India's bustling financial capital and entertainment hub on the west coast.</p>
+					<div class="stars">
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="far fa-star"></i>
+					</div>
+					<div class="price">Rs 25000<span>Rs 30000</span></div>
+					<a href="tourlogin.html" class="btn">Book Now</a>
+				</div>
+			</div>
+
+
+			<div class="box">
+				<img
+					src="https://3.imimg.com/data3/EC/DC/MY-9123576/goldentemple-ofamritsar-golden-temple-amritsar-500x500.gif">
+				<div class="content">
+					<h3><i class="fas fa-map-marker-alt"></i>AMRITSER GOLDEN TEMPLE</h3>
+					<p>A sacred Sikh pilgrimage site renowned for its stunning golden architecture and spiritual
+						significance.</p>
+					<div class="stars">
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="far fa-star"></i>
+
+					</div>
+					<div class="price">Rs 25000<span>Rs 30000</span></div>
+					<a href="tourlogin.html" class="btn">Book Now</a>
+				</div>
+			</div>
+
+			<div class="box">
+				<img src="https://upload.wikimedia.org/wikipedia/commons/5/52/Hogenakkal_Falls_Close.jpg">
+				<div class="content">
+					<h3><i class="fas fa-map-marker-alt"></i>HOGENAKKAL</h3>
+					<p>Picturesque waterfalls and a popular tourist spot located on the river Kaveri in Tamil Nadu,
+						India.</p>
+					<div class="stars">
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="far fa-star"></i>
+
+					</div>
+					<div class="price">Rs 25000<span>Rs 30000</span></div>
+					<a href="tourlogin.html" class="btn">Book Now</a>
+				</div>
+			</div>
+
+			<div class="box">
+				<img src="https://cdn.britannica.com/17/83817-050-67C814CD/Mount-Everest.jpg">
+				<div class="content">
+					<h3><i class="fas fa-map-marker-alt"></i>EVEREST</h3>
+					<p>Earth's highest mountain, standing majestically in the Himalayas and attracting adventurous
+						climbers from around the
+						world.</p>
+					<div class="stars">
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="far fa-star"></i>
+					</div>
+					<div class="price">Rs 25000<span>Rs 30000</span></div>
+					<a href="tourlogin.html" class="btn">Book Now</a>
+				</div>
+			</div>
+
+			<div class="box">
+				<img src="https://im.whatshot.in/img/2020/Jan/thir2-1580373106.jpg">
+				<div class="content">
+					<h3><i class="fas fa-map-marker-alt"></i>THIRUVALLUVAR STATUE</h3>
+					<p>A towering monument dedicated to the Tamil poet and philosopher Thiruvalluvar, overlooking the
+						scenic Kanyakumari
+						coastline.</p>
+					<div class="stars">
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="far fa-star"></i>
+					</div>
+					<div class="price">Rs 25000<span>Rs 30000</span></div>
+					<a href="tourlogin.html" class="btn">Book Now</a>
+				</div>
+			</div>
+
+			<div class="box">
+				<img
+					src="https://www.tamilnadutourism.tn.gov.in/img/pages/medium-desktop/ooty-1655457424_bca80f81e8391ebdaaca.webp">
+				<div class="content">
+					<h3><i class="fas fa-map-marker-alt"></i>OOTY</h3>
+					<p>A charming hill station in the Nilgiri Mountains, known for its pleasant climate, tea gardens,
+						and scenic beauty.</p>
+					<div class="stars">
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="far fa-star"></i>
+					</div>
+					<div class="price">Rs 25000<span>Rs 30000</span></div>
+					<a href="tourlogin.html" class="btn">Book Now</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<a name="services"></a>
+	<section class="services" id="services">
+		<h1 class="head">
+			<span>S</span>
+			<span>E</span>
+			<span>R</span>
+			<span>V</span>
+			<span>I</span>
+			<span>C</span>
+			<span>E</span>
+			<span>S</span>
+		</h1>
+
+
+		<div class="box-container">
+
+			<div class="box">
+				<i class="fas fa-hotel"></i>
+				<h3>AFFORDABLE HOTEL</h3>
+				<p>Discover budget-friendly accommodations that don't compromise on comfort and quality, ensuring a
+					wallet-friendly stay
+					without sacrificing memorable experiences.
+				</p>
+
+			</div>
+			<div class="box">
+				<i class="fas fa-utensils"></i>
+				<h3>FOOD AND DRINK</h3>
+				<p>Savor a world of flavors with our culinary recommendations, from local street delights to hidden
+					gems, and complement
+					your journey with delightful drinks to immerse yourself in each destination's culture.
+				</p>
+			</div>
+			<div class="box">
+				<i class="fas fa-bullhorn"></i>
+				<h3>SAFTY GUIDE</h3>
+				<p>Your safety is our priority - explore confidently with our comprehensive safety guide, providing
+					essential tips and
+					insights to ensure a secure and worry-free travel experience worldwide.
+				</p>
+			</div>
+			<div class="box">
+				<i class="fas fa-globe-asia"></i>
+				<h3>AROUND THE WORLD</h3>
+				<p>Embark on a globetrotting adventure and explore diverse cultures, breathtaking landscapes, and iconic
+					landmarks as we
+					bring you the best destinations and travel inspirations from around the world.
+				</p>
+
+			</div>
+			<div class="box">
+				<i class="fas fa-plane"></i>
+				<h3>Fastest travel</h3>
+				<p>Optimize your journey with the quickest travel options, including efficient transportation and
+					time-saving tips, to make
+					the most of your precious vacation moments.
+				</p>
+			</div>
+			<div class="box">
+				<i class="fas fa-hiking"></i>
+				<h3>ADVENTURE</h3>
+				<p>Calling all thrill-seekers! Unleash your adventurous spirit with our curated list of
+					adrenaline-pumping activities and
+					extraordinary experiences, pushing the boundaries of exploration.
+				</p>
+			</div>
+		</div>
+	</section>
+	<a name="gallery"></a>
+	<section class="gallery" id="gallery">
+		<h1 class="head">
+			<span>G</span>
+			<span>A</span>
+			<span>L</span>
+			<span>L</span>
+			<span>E</span>
+			<span>R</span>
+			<span>Y</span>
+		</h1>
+		<div class="box-container">
+			<div class="box">
+				<img src="https://www.jetsetter.com//uploads/sites/7/2018/04/s0i_qgfG.jpeg">
+				<div class="content">
+					<h3>AMAZING PLACES</h3>
+					<h2>Rishikesh himalayas</h2>
+
+				</div>
+			</div>
+			<div class="box">
+				<img
+					src="https://www.treebo.com/blog/wp-content/uploads/2018/06/Snow-Sand-Road-The-21-Most-Beautiful-Places-In-India.jpg">
+				<div class="content">
+					<h3>AMAZING PLACES</h3>
+					<h2>Snow Sand Road</h2>
+
+				</div>
+			</div>
+			<div class="box">
+				<img
+					src="https://static.toiimg.com/thumb/msid-92089121,width-748,height-499,resizemode=4,imgsize-139308/.jpg">
+				<div class="content">
+					<h3>AMAZING PLACES</h3>
+					<h2>Maotha Lake</h2>
+
+				</div>
+			</div>
+			<div class="box">
+				<img src="https://assets.traveltriangle.com/blog/wp-content/uploads/2015/07/Nubra-Valley-in-Ladakh.jpg">
+				<div class="content">
+					<h3>AMAZING PLACES</h3>
+					<h2>Nubra Valley in Ladakh</h2>
+
+				</div>
+			</div>
+			<div class="box">
+				<img src="https://www.fabhotels.com/blog/wp-content/uploads/2019/08/Temple-in-India_600.jpg">
+				<div class="content">
+					<h3>AMAZING PLACES</h3>
+					<h2>Varanasi temple</h2>
+				</div>
+			</div>
+			<div class="box">
+				<img
+					src="https://deih43ym53wif.cloudfront.net/hanging_bridge_himachal_india_shutterstock_1087070918_c59e0eb675.jpeg">
+				<div class="content">
+					<h3>AMAZING PLACES</h3>
+					<h2>Himachal Hanging Bridge </h2>
+				</div>
+			</div>
+			<div class="box">
+				<img src="https://timesofindia.indiatimes.com/photo/93940364/93940364.jpg">
+				<div class="content">
+					<h3>AMAZING PLACES</h3>
+					
+					<h2>West Bengal Railway</h2>
+				</div>
+			</div>
+			<div class="box">
+				<img
+					src="https://media.newstrack.in/amp/uploads/health-lifestyle/travel-info/Sep/27/big_thumb/india_615143459e018.JPG">
+				<div class="content">
+					<h3>AMAZING PLACES</h3>
+					<h2>Shangrila Lake</h2>
+				</div>
+			</div>
+		</div>
+	</section>
+	<a name="reviews"></a>
+	<section class="reviews" id="reviews">
+		<h1 class="head">
+			<span>R</span>
+			<span>E</span>
+			<span>V</span>
+			<span>I</span>
+			<span>E</span>
+			<span>W</span>
+			<span>S</span>
+		</h1>
+		<div class="swiper mySwiper review-slider">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<div class="box">
+						<img src="">
+						<h3>John Deo</h3>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, corrupti! Neque illum,
+							ex ratione nihil, quae quis possimus hic impedit nam a repudiandae beatae aspernatur,
+							quisquam recusandae placeat commodi assumenda?</p>
+						<div class="stars">
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="far fa-star"></i>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="box">
+						<img src="">
+						<h3>Dia</h3>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, corrupti! Neque illum,
+							ex ratione nihil, quae quis possimus hic impedit nam a repudiandae beatae aspernatur,
+							quisquam recusandae placeat commodi assumenda?</p>
+						<div class="stars">
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="far fa-star"></i>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="box">
+						<img src="">
+						<h3>Clasius</h3>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, corrupti! Neque illum,
+							ex ratione nihil, quae quis possimus hic impedit nam a repudiandae beatae aspernatur,
+							quisquam recusandae placeat commodi assumenda?</p>
+						<div class="stars">
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="far fa-star"></i>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="box">
+						<img src="">
+						<h3>Jeeva</h3>
+						<p></p>
+						<div class="stars">
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="far fa-star"></i>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="box">
+						<img src="">
+						<h3>Kamal</h3>
+						<p></p>
+						<div class="stars">
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="far fa-star"></i>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="box">
+						<img src="">
+						<h3>Ravi</h3>
+						<p>
+						</p>
+						<div class="stars">
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="far fa-star"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="swiper-pagination"></div>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+		<!-- Initialize Swiper -->
+		<script>
+			var swiper = new Swiper(".mySwiper", {
+				slidesPerView: "auto",
+				spaceBetween: 30,
+				pagination: {
+					el: ".swiper-pagination",
+					clickable: true,
+				},
+			});
+		</script>
+		</div>
+		</div>
+	</section>
+	<a name="contact"></a>
+	<section class="contact">
+		<h1 class="head">
+			<span>C</span>
+			<span>O</span>
+			<span>N</span>
+			<span>T</span>
+			<span>A</span>
+			<span>C</span>
+			<span>T</span>
+		</h1>
+
+
+		<div class="row">
+
+			<div class="image">
+				<img
+					src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9vwyaXMHKnKrMZCOkbLcAN9STfLS7osl1NQA8R7vMAJEwIz15BEwhGbxgMO3ls064VeU&usqp=CAU">
+
+			</div>
+			<div>
+				<h2>Contact Us:</h2><br><br>
+				<a href="mailto:usemeeeeeid2@gmail.com">Mail Us</a><br><br>
+				<h2>Mobile Number</h2>
+				<h3>9642213457</h3><br>
+				<h2>Telephone Number</h2>
+				<h3>044-846581</h3>
+			</div>
+		</div>
+	</section>
+	<div class="footer">
+		<a href="#">Terms and Conditions</a>
+		<a href="#">Privacy Policy</a>
+		<a href="#">Complaints</a>
+	</div>
+</body>
+
+</html>

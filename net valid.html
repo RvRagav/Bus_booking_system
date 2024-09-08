@@ -1,0 +1,92 @@
+
+<html>
+<head>
+<style>
+#form1
+{
+font-size:25px;
+margin: 50px 300px 300px;
+}
+#good
+{
+border-width:10px;
+border-color:black;
+border-style:ridge;
+padding: 20px;
+}
+input {
+  margin-top: 15px;
+  padding: 5px;
+}
+label{
+  color: black;
+  margin-top: 20px;
+}
+img{
+      float: right;
+    }
+button{
+  background-color: green;
+  color: aliceblue;
+  font-size: large;
+  padding: 10px;
+}
+</style>
+
+<body>
+  <h1 style="text-align: center;color: rgb(253, 76, 6);">NET-BANKING</h1>
+<form id="form1">
+<div id="good">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoBdiI1ihj0OO9yNl0_FGq1GBeBeF_plNz035oB_Jl7D_v74ZqIB0ChCYwPI19hMtTwDU&usqp=CAU" height="300" width="300">
+  <label for="userId">User ID:</label><br>
+  <input type="text" id="userId" required>
+  <br><br>
+  <label for="password">Password:</label><br>
+  <input type="password" id="password" required>
+  <br><br>
+  <label for="transactionPassword">Transaction Password:</label><br>
+  <input type="password" id="transactionPassword" required><br>
+  <br>
+  <button type="button" onclick="validateCredentials()">Pay</button>
+</form>
+</div>
+<script>
+function validateCredentials() {
+  var userIdInput = document.getElementById("userId");
+  var passwordInput = document.getElementById("password");
+  var transactionPasswordInput = document.getElementById("transactionPassword");
+  
+  var userId = userIdInput.value;
+  var password = passwordInput.value;
+  var transactionPassword = transactionPasswordInput.value;
+  
+  // Check credentials against server-side validation
+  // You should send an AJAX request to the server to validate the credentials
+  // and handle the response accordingly
+  if (isValidCredentials(userId, password, transactionPassword)) {
+    alert("Login successful!");
+    // Redirect to the account page or perform other actions
+  } else {
+    alert("Invalid credentials!");
+  }
+}function isValidCredentials(userId, password, transactionPassword) {
+  // Perform server-side validation here
+  // You can use AJAX to send the credentials to the server for validation
+  // and return the result
+  
+  // Example server-side validation logic:
+  var validUserId = "your_valid_user_id";
+  var validPassword = "your_valid_password";
+  var validTransactionPassword = "your_valid_transaction_password";
+  
+  return (
+    userId === validUserId &&
+    password === validPassword &&
+    transactionPassword === validTransactionPassword
+  );
+} 
+
+</script>
+</body>
+</html>
+

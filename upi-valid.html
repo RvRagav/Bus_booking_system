@@ -1,0 +1,109 @@
+
+
+
+<html>
+<head>
+<style>
+#form1
+{
+font-size:25px;
+margin: 50px 300px 300px;
+
+}
+#good
+{
+border-width:10px;
+border-color:black;
+border-style:ridge;
+padding: 20px;
+height: 450px;
+}
+input {
+  margin-top: 10px;
+}
+button{
+  background-color: green;
+  color: aliceblue;
+  font-size: large;
+  padding: 10px;
+}
+
+img{
+      float: right;
+    }
+label{
+  color: black;
+  margin-top: 20px;
+}
+</style>
+</head>
+<body>
+<h1 style="text-align: center;color: rgb(253, 76, 6);">PAYMENT THROUGH UPI</h1>
+<form id="form1">
+<div id="good">
+
+  <h2>You can pay through either by Upi id or Upi number</h2>
+<img src="https://nimbbl.biz/blog/wp-content/uploads/2022/03/blog-landscape-65.png" alt="upi" height="300" width="350">
+  <label><input type="radio" name="upiType" value="upiId"> UPI ID</label><br>
+  <div id="upiIdInput" style="display: none;">
+    <br>
+    <label for="upiId">Enter UPI ID:</label><br>
+    <input type="text" id="upiId" name="upiId" size="40">
+  </div>
+  <h4>
+    OR
+  </h4>
+  <label><input type="radio" name="upiType" value="upiNumber"> UPI Number</label>
+
+  <div id="upiNumberInput" style="display: none;">
+    <br>
+    <label for="upiNumber">Enter UPI Number:</label><br>
+    <input type="text" id="upiNumber" name="upiNumber">
+  </div>
+  <div style="text-align: center;">
+    <br><br>
+  <button type="submit" onclick="checkID()">Pay</button>
+  </div>
+
+
+</div>
+</form>
+<p id="numberResult"></p>
+<p id="idResult"></p>
+<script>
+  const upiIdRadio = document.querySelector('input[value="upiId"]');
+  const upiNumberRadio = document.querySelector('input[value="upiNumber"]');
+  const upiIdInputDiv = document.getElementById('upiIdInput');
+  const upiNumberInputDiv = document.getElementById('upiNumberInput');
+
+  upiIdRadio.addEventListener('click', function () {
+    upiIdInputDiv.style.display = 'block';
+    upiNumberInputDiv.style.display = 'none';
+  });
+
+  upiNumberRadio.addEventListener('click', function () {
+    upiIdInputDiv.style.display = 'none';
+    upiNumberInputDiv.style.display = 'block';
+  });
+
+function checkID() {
+  var numberInput = document.getElementById("upiNumber").value;
+  var numberPattern = /^(\d{10})@(upi)$/;
+  
+  if (numberPattern.test(numberInput)) {
+    document.getElementById("numberResult").innerHTML= "Valid UPI number.";
+  } else {
+    document.getElementById("numberResult").innerHTML= "Invalid UPI number.";
+  }
+  var idInput = document.getElementById("upiId").value;
+  var idPattern = /^(.+)(@(upi))$/;
+  
+  if (idPattern.test(idInput)) {
+    document.getElementById("idResult").innerHTML = "Valid UPI ID.";
+  } else {
+    document.getElementById("idResult").innerHTML= "Invalid UPI ID.";
+  }
+}
+</script>
+</body>
+</html>

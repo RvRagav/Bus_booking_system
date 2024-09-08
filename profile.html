@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>User Information</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 50%;
+      margin: 20px auto;
+    }
+
+    th,
+    td {
+      border: 2px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    .edit-block {
+      display: none;
+      margin: 20px auto;
+      width: 50%;
+      border: 1px solid #ddd;
+      padding: 20px;
+    }
+
+    .edit-block label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input {
+      margin-top: 5px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      color: black;
+      background-color: orange;
+      padding: .5rem 2rem;
+      border: .2rem solid red;
+      cursor: pointer;
+      font-size: 1.7rem;
+      border-radius: 10px;
+      text-decoration: none;
+    }
+  </style>
+
+  <script>
+
+  </script>
+</head>
+
+<body>
+  <h1>User Information</h1>
+  <table>
+    <tr>
+      <th>Username</th>
+      <th>Password</th>
+    </tr>
+    <tr>
+      <td id="username" name="uname"></td>
+      <td id="password" name="password"></td>
+    </tr>
+  </table>
+
+  <button class="btn" onclick="showEditBlock1()">Edit Email</button>
+  <button class="btn" onclick="showEditBlock2()">Edit Password</button>
+
+
+
+  <div class="edit-block" id="editBlock1">
+    <form action="profile" method="post">
+      Username<br><input type="text" id="curname" name="curname" size="50">
+      <label style="font-size:25px;">New Email </label>
+      <input type="text" id="editInput" name="email" size="50"><br> <!-- Changed the id to "editInput" -->
+
+      <input type="submit" id="save1" class="btn" value="UPDATE">
+    </form>
+  </div>
+
+  <div class="edit-block" id="editBlock2">
+    <form action="profile" method="post">
+      Username<br>
+      <input type="text" id="curpname" name="curname" size="50">
+      <label style="font-size:25px;">New Password </label>
+      <input type="text" id="editInput" name="password" size="50"><br> <!-- Changed the id to "editInput" -->
+
+      <input type="submit" id="save2" class="btn" value="UPDATE">
+    </form>
+  </div>
+
+  <!-- ... Your remaining HTML code ... -->
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const user = localStorage.getItem('uname');
+      const password = localStorage.getItem('password');
+      document.getElementById('username').innerText = user; // Use innerText to set content
+      document.getElementById('password').innerText = password; // Use innerText to set content
+      document.getElementById('curname').value = user;
+      document.getElementById('curpname').value = user;
+
+    });
+
+    function showEditBlock1() {
+      var editBlock = document.getElementById("editBlock1");
+      editBlock.style.display = "block";
+      var editedvalue = document.getElementById('editInput').value;
+      console.log(editedvalue);
+      var editBlock = document.getElementById("editBlock2");
+      editBlock.style.display = "none";
+    }
+
+    function showEditBlock2() {
+      var editBlock = document.getElementById("editBlock2");
+      editBlock.style.display = "block";
+      var editBlock = document.getElementById("editBlock1");
+      editBlock.style.display = "none";
+    }
+
+    function saveChanges() {
+
+      var editedvalue = document.getElementById('editInput').value;
+
+      var editBlock = document.getElementById("editBlock2");
+      editBlock.style.display = "none";
+      var editBlock = document.getElementById("editBlock1");
+      editBlock.style.display = "none";
+
+
+    }
+
+    function saveChanges1() {
+
+      var editedvalue = document.getElementById('editInput').value;
+
+      var editBlock = document.getElementById("editBlock2");
+      editBlock.style.display = "none";
+      var editBlock = document.getElementById("editBlock1");
+      editBlock.style.display = "none";
+
+
+    }
+
+    document.getElementById('save1').addEventListener('click', saveChanges);
+    document.getElementById('save2').addEventListener('click', saveChanges1);
+  </script>
+
+
+</body>
+
+</html>

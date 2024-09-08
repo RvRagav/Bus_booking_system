@@ -1,0 +1,86 @@
+<html>
+<head>
+<style>
+#form1
+{
+font-size:25px;
+color:blue;
+margin: 50px 300px 300px;
+}
+#good
+{
+border-width:10px;
+border-color:black;
+border-style:ridge;
+padding: 20px;
+}
+input {
+  margin-top: 10px;
+}
+img{
+      float: right;
+    }
+button{
+  background-color: green;
+  color: aliceblue;
+  font-size: large;
+  padding: 10px;
+}
+</style></head>
+<body>
+<h1 style="text-align: center;">CARD-PAYMENT</h1>
+<form id="form1">
+<div id="good">
+  <img src="https://images.moneycontrol.com/static-mcnews/2023/05/bank_cards_banking_financial-services1.jpg" alt="cards" height="300" width="350">
+  <label for="cardNumber">Debit Card Number:</label><br>
+  <input type="text" id="cardNumber" size=50 required>
+  <br><br>
+  <label for="Name">Name in Card:</label><br>
+  <input type="text" id="name" size=50 required>
+  <br><br>
+  <label for="expiryDate">Expiry Month and Year:</label><br>
+  <input type="month" id="expiry" name="expiry" required>
+  <br><br>
+  <label for="cvv">CVV:</label><br>
+  <input type="number" id="cvv" min="100" max="999" required>
+  <br><br>
+  <div style="text-align: center;">
+  <button type="button" onclick="validateForm()">Pay</button></div>
+</form>
+</div>
+<script>
+function validateForm() {
+  var cardNumberInput = document.getElementById("cardNumber");
+  var cvvInput = document.getElementById("cvv");
+  
+  // Card Number Validation
+  var cardNumber = cardNumberInput.value;
+  if (!isValidCardNumber(cardNumber)) {
+    alert("Invalid card number!");
+    return;
+  }
+  
+  // CVV Validation
+  var cvv = cvvInput.value;
+  if (!isValidCVV(cvv)) {
+    alert("Invalid CVV!");
+    return;
+  }
+  
+  // Valid input
+  alert("Valid card number and CVV!");
+}
+
+function isValidCardNumber(cardNumber) {
+  var cardNumberRegex = /^[0-9]{15,16}$/;
+  return cardNumberRegex.test(cardNumber);
+}
+
+function isValidCVV(cvv) {
+  var cvvRegex = /^[0-9]{3,4}$/;
+  return cvvRegex.test(cvv);
+}
+
+</script>
+</body>
+</html>

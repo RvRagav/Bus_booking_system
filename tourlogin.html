@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles\tourlogin.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login to Explore</title>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const myInput = document.getElementById("username");
+        const myInput2 = document.getElementById("password");
+
+        const myButton = document.getElementById("btn");
+
+        myButton.addEventListener("click", function () {
+            const inputValue = myInput.value;
+            const inputValue2=myInput2.value;
+            console.log(inputValue);
+            localStorage.setItem('uname',inputValue);
+            localStorage.setItem('password', inputValue2);
+
+        });
+    });
+</script>
+</head>
+
+<body>
+    <form action="login" method="post">
+        <h2 style="color: dodgerblue; font-family: algerian; text-align: center; font-size: 40px;">LOGIN TO EXPLORE</h2>
+        <label for="Name" style="font-family: calibri;font-size: 20px;"><b>Enter Username:</b></label><br>
+        <input type="text" id="username" name="username" placeholder="Username">
+        <br><br>
+        <label for="password" style="font-family: calibri;font-size: 20px;"><b>Enter Password :</b></label><br>
+        <input type="password" id="password" name="password" placeholder="Password">
+        <br><br>
+        <button id="btn"
+            style="padding: 5px; background-color:rgb(4, 0, 255); border:none;background-color: blue;color: aliceblue;">Login</button>
+        <h4>Don't have an account?</h4><a href="toursignup.html">Sign up</a>
+    </form>
+</body>
+
+</html>

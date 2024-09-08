@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet"  href="styles/toursignup.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <script defer src="scripts/toursignup.js"></script>
+</head>
+<body>
+    <h1 style="font-family:Algerian ;color:black;text-align: center;">New user</h1>
+    <div class="container">
+        <form action="signup" id="form" method="post">
+            <div class="input-group">
+            <label for="fname">User Name:</label>
+            <input type="text" placeholder="username" id="uname" name="uname">
+            <div class="error"></div><br></div>
+            <div class="input-group">
+            <label for="email">Email:</label>
+            <input type="email" placeholder="Email" id="email" name="email">
+            <div class="error"></div><br></div>
+            <div class="input-group">
+            <label for="password">Password:</label>
+            <input type="password" placeholder="Password" id="password" name="password">
+            <div class="error"></div><br></div>
+          
+            <div class="input-group">
+            <label for="cpassword">Confirm Password:</label>
+            <input type="text" placeholder="CPassword" id="cpassword">
+            <div class="error"></div><br></div>
+            
+            <button style="padding: 10px; background-color: dimgrey; color:white;">Sign In</button>
+            <h4>Already have an account?</h4><a href="tourlogin.html" >Login</a>
+
+        </form>
+    </div>
+</body>
+</html>

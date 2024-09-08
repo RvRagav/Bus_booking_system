@@ -1,0 +1,21 @@
+form{
+
+	font-family: Times new roman;
+	padding: 75px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+	width: 200px;
+	text-align: left;
+	margin-top: 40px;
+	margin-left: 35%;
+	border-radius: 6px;
+}
+body{
+    background-image:url('https://www.travelagewest.com/uploadedImages/Thought_Leadership/Lindblad2_hero_lr.jpg');
+    /*background:linear-gradient(red,yellow) ;*/
+    background-repeat: no-repeat;background-size:cover;height: 700px;   
+}
+input{
+    height:25px;
+    width:200px;
+}

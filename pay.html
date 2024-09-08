@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Payment Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 100px 300px 200px;
+      border: 5px solid black;
+      padding: 20px;
+      
+    }
+
+    .payment-mode {
+  
+  clear: both;
+}
+
+.payment-mode img {
+  float: right;
+  margin-left: 10px;
+}
+
+.payment-mode label {
+  display: block;
+  margin-left: 100px; 
+}
+
+
+    label {
+      display: block;
+      margin-bottom: 15px;
+    }
+    img{
+      float: right;
+    }
+    input[type="submit"] {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    label{
+      font-size: 40px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 style="text-align: center;">Payment Page</h1>
+  <div class="payment-mode">
+    <label><img src="https://3.bp.blogspot.com/-NjQxle_xP8s/Wpurir1V2zI/AAAAAAAAAhI/B0yc4l--fl4Ea7tDrSfyVaka-r7mANdxwCLcBGAs/s1600/rupay.jpg" height="60">
+    <input type="radio" name="payment" value="debit_card"> Debit Card</label><p></p>
+    <img src="https://d6xcmfyh68wv8.cloudfront.net/assets/upi-autopay/logo-desktop.png" height="60">
+    <label><input type="radio" name="payment" value="upi"> UPI</label><p></p>
+    <img src="https://cdn.iconscout.com/icon/free/png-256/free-netbanking-credit-debit-bank-transaction-card-32270.png?f=webp" height="65">
+    <label><input type="radio" name="payment" value="internet_banking"> Internet Banking</label>
+  </div>
+  <div style="text-align: center;">
+    <input type="submit" value="Proceed to Payment" id="submitBtn">
+  </div>
+
+  <script>
+    document.getElementById('submitBtn').addEventListener('click', function () {
+      const selectedPaymentMode = document.querySelector('input[name="payment"]:checked');
+
+      if (selectedPaymentMode) {
+        const paymentMode = selectedPaymentMode.value;
+
+        switch (paymentMode) {
+          case 'debit_card':
+            window.location.href = 'card valid.html';
+            break;
+          case 'upi':
+            window.location.href = 'upi-valid.html';
+            break;
+          case 'internet_banking':
+            window.location.href = 'net valid.html';
+            break;
+        }
+      } else {
+        alert('Please select a payment mode.');
+      }
+    });
+  </script>
+</body>
+
+</html>
